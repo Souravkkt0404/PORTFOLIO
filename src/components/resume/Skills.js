@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
@@ -43,7 +43,9 @@ const Skills = () => {
             </span>
           </div>
           <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Html,Css,Js,Bootstrap</p>
+            <p className="text-sm uppercase font-medium">
+              Html,Css,Javascript
+            </p>
             <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
               <motion.span
                 initial={{ x: "-100%", opacity: 0 }}
@@ -56,7 +58,9 @@ const Skills = () => {
             </span>
           </div>
           <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Mongodb & (SQL | NOSQL)</p>
+            <p className="text-sm uppercase font-medium">
+              SQL
+            </p>
             <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
               <motion.span
                 initial={{ x: "-100%", opacity: 0 }}
@@ -68,8 +72,8 @@ const Skills = () => {
               </motion.span>
             </span>
           </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Express</p>
+         <div className="overflow-x-hidden">
+            <p className="text-sm uppercase font-medium">Tailwind Css / Bootstrap Css</p>
             <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
               <motion.span
                 initial={{ x: "-100%", opacity: 0 }}
@@ -80,7 +84,7 @@ const Skills = () => {
                 <span className="absolute -top-7 right-0">80%</span>
               </motion.span>
             </span>
-          </div>
+  </div> 
         </div>
       </div>
 
@@ -112,9 +116,9 @@ const Skills = () => {
                 initial={{ x: "-100%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[80%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
+                className="w-[50%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
               >
-                <span className="absolute -top-7 right-0">80%</span>
+                <span className="absolute -top-7 right-0">50%</span>
               </motion.span>
             </span>
           </div>
@@ -132,7 +136,9 @@ const Skills = () => {
             </span>
           </div>
           <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Google OAuth, Cookies, Passport,Postman API,OpenCV)</p>
+            <p className="text-sm uppercase font-medium">
+              Google OAuth, Cookies, Passport,Postman API,OpenCV)
+            </p>
             <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
               <motion.span
                 initial={{ x: "-100%", opacity: 0 }}
@@ -145,7 +151,9 @@ const Skills = () => {
             </span>
           </div>
           <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Web Scrapping using (Selenium|Beautifulsoup)</p>
+            <p className="text-sm uppercase font-medium">
+              Web Scrapping using (Selenium|Beautifulsoup)
+            </p>
             <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
               <motion.span
                 initial={{ x: "-100%", opacity: 0 }}
@@ -161,6 +169,6 @@ const Skills = () => {
       </div>
     </motion.div>
   );
-}
+};
 
-export default Skills
+export default Skills;
