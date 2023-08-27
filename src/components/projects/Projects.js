@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix } from "../../assets/index";
+import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix,projectExtra } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -37,6 +37,13 @@ const Projects = () => {
           src={projectThree}
           githubLink="https://github.com/mihirc0111/Secrets"
           websiteLink="https://www.altorumleren.com/"
+        />
+        <ProjectsCard
+          title="Shooline Consultancy Website"
+          des=" This is a website Our accomplished team of lawyers brings extensive expertise to various legal domains, including Criminal Law, check bounce cases, and Matrimonial/Divorce cases."
+          src={projectExtra}
+          githubLink="https://github.com/mihirc0111/Secrets"
+          websiteLink="https://shooline-consultancy.vercel.app/"
         />
         <ProjectsCard
           title="After School Diaries"
