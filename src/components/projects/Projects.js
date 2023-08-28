@@ -18,19 +18,12 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
         <ProjectsCard
           title="Ace Web Solution Website"
-          des=" A ML project using logistic regression to find out the win probability of the chasing team in an IPL match. Used Kaggle dataset from 2008-2019."
+          des=" A Dynamic website project using React Js with Tailwind CSS and email JS."
           src={projectOne}
           githubLink="https://github.com/mihirc0111/IPL-Predictor-Mihir"
           websiteLink="https://acewebsolution.com/"
-
         />
-        <ProjectsCard
-          title="Ennoventure Technolgy Pvt Ltd Website"
-          des=" This is a blog website have a EJS, Node & Express as backend and Mongoose & MongoDB database."
-          src={projectTwo}
-          githubLink="https://github.com/mihirc0111/Mi-Blog-Van"
-          websiteLink="https://ennoventure.com/"
-        />
+      
         <ProjectsCard
           title="Altorum Leren Website"
           des=" This is a website for posting secrets anonymously with an authentication system ."
