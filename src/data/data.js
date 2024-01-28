@@ -21,19 +21,19 @@ export const featuresData = [
     id: 3,
     icon: <SiProgress />,
     title: "YouTube Vlogging",
-    des: "Daily vloggers wear multiple hats, combining creativity, technical skills, audience engagement, and business acumen to produce entertaining videos, build a loyal following, and establish a sustainable presence on YouTube.",
+    des: "Daily vloggers juggle creativity, tech skills, audience engagement for entertaining YouTube content.",
   },
   {
     id: 4,
     icon: <CgWebsite />,
     title: "Web Development",
-    des: "Have completed a React-development course from Udemy. Have developed various projects and hosted them too, check them on my github.",
+    des: "Smoke testing ensures application stability by focusing on essential functionalities' verification.",
   },
   {
     id: 5,
     icon: <MdAnalytics />,
     title: "Smoke Testing and Debuging",
-    des: "Focusing on essential functionalities, smoke testing helps ensure that the application is stable enough to proceed with more comprehensive testing phases, thereby saving time and resources.",
+    des: "Focusing on essential functionalities, smoke testing helps ensure that the application is stable enough or not",
   },
   {
     id: 6,
