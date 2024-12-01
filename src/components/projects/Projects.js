@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix,projectExtra } from "../../assets/index";
+import { projectOne, projectThree, projectFour, projectFive, projectSix,projectExtra } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {

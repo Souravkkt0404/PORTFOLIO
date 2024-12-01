@@ -2,7 +2,6 @@ import React from "react";
 import { FaLinkedinIn, FaFilePdf } from "react-icons/fa";
 import { SiGithub, SiGmail } from "react-icons/si";
 import { contactImg } from "../../assets/index";
-import { Link } from "react-router-dom";
 
 const ContactLeft = () => {
   return (

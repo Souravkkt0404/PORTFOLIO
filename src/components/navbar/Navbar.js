@@ -2,23 +2,25 @@ import React, { useState } from 'react'
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaLinkedinIn, FaFilePdf } from "react-icons/fa";
-import { SiGithub, SiGmail } from "react-icons/si";
 import { logo } from "../../assets/"
-import { navLinksdata } from '../../constants';
+import { mediaLinks, navLinksData } from "../../constants";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div>
-        <img src={logo} alt="logo" style={{ width: "24%", marginLeft: "5px" }} />
+        <img
+          src={logo}
+          alt="logo"
+          style={{ width: "24%", marginLeft: "5px" }}
+        />
       </div>
       <div>
         <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
-          {navLinksdata.map(({ _id, title, link }) => (
+          {navLinksData?.map(({ _id, title, link }) => (
             <li
-              className="text-base font-normal text-white font-semibold tracking-wide cursor-pointer hover:text-designColor duration-300"
+              className="text-base text-white font-semibold tracking-wide cursor-pointer hover:text-designColor duration-300"
               key={_id}
             >
               <Link
@@ -46,11 +48,14 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  "I am a passionate React developer and Angular learning enthusiast. With a strong foundation in web development and a keen eye for data, I create innovative solutions that bridge technology and user experience."
+                  "I am a passionate React developer and Angular learning
+                  enthusiast. With a strong foundation in web development and a
+                  keen eye for data, I create innovative solutions that bridge
+                  technology and user experience."
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
-                {navLinksdata.map((item) => (
+                {navLinksData?.map((item) => (
                   <li
                     key={item._id}
                     className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
@@ -74,20 +79,18 @@ const Navbar = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4">
-                  <span className="bannerIcon">
-                    <a href=''><SiGithub /></a>
-                  </span>
-                  <span className="bannerIcon">
-                    <a href=''><SiGmail /></a>
-                  </span>
-                  <span className="bannerIcon">
-                    <a href=''><FaLinkedinIn /></a>
-                  </span>
-                  <span className="bannerIcon">
-                    <a href='https://drive.google.com/file/d/1tDWPTjETXoLTKUPwfjrTh0hnESZ7TO3V/view?usp=sharing'>
-                      <FaFilePdf />
-                    </a>
-                  </span>
+                  {mediaLinks?.map(({ href, icon, title }, index) => (
+                    <span key={index} className="bannerIcon">
+                      <a
+                        href={href}
+                        title={title}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {icon}
+                      </a>
+                    </span>
+                  ))}
                 </div>
               </div>
               <span
