@@ -1,6 +1,5 @@
 import { AiFillAppstore } from "react-icons/ai";
-import {  FaBrain} from "react-icons/fa";
-import { SiProgress} from "react-icons/si";
+import { FaBrain, FaYoutube } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { MdAnalytics } from "react-icons/md";
 
@@ -14,12 +13,12 @@ export const featuresData = [
   {
     id: 2,
     icon: <AiFillAppstore />,
-    title: "App Development",
-    des: "Will learn this soon in near future !",
+    title: "Team Development",
+    des: "Enhance collaboration and teamwork.",
   },
   {
     id: 3,
-    icon: <SiProgress />,
+    icon: <FaYoutube />,
     title: "YouTube Vlogging",
     des: "Daily vloggers juggle creativity, tech skills, audience engagement for entertaining YouTube content.",
   },
