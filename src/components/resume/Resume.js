@@ -13,24 +13,26 @@ const Resume = () => {
   return (
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex justify-center items-center text-center">
-        <Title title="18+ YEARS OF ACADEMIC AND WORK EXPERIENCE" des="My Resume" />
+        <Title title="" des="My Resume" />
       </div>
       <div>
         <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-          <li
-            onClick={() =>
-              setEducationData(true) &
-              setSkillData(false) &
-              setExperienceData(false) &
-              setAchievementData(false)
-            }
-            className={`${
-              educationData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi`}
-          >
-            Education
+          <li className="resumeLi">
+            <button
+              onClick={() => {
+                setEducationData(true);
+                setSkillData(false);
+                setExperienceData(false);
+                setAchievementData(false);
+              }}
+              className={`${
+                educationData
+                  ? "border-designColor rounded-lg"
+                  : "border-transparent"
+              }`}
+            >
+              Education
+            </button>
           </li>
           <li
             onClick={() =>
@@ -81,7 +83,6 @@ const Resume = () => {
       {skillData && <Skills />}
       {achievementData && <Achievement />}
       {experienceData && <Experience />}
- 
     </section>
   );
 }
