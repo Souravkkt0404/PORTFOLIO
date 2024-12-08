@@ -1,6 +1,7 @@
-import React,{useState} from 'react'
-import Title from '../layouts/Title';
-import ContactLeft from './ContactLeft';
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import Title from "../layouts/Title";
+import ContactLeft from "./ContactLeft";
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -11,28 +12,49 @@ const Contact = () => {
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  // ========== Email Validation start here ==============
-  const emailValidation = () => {
-    return String(email)
-      .toLocaleLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
+  const emailValidation = (email) => {
+    const emailRegex = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
+    return emailRegex.exec(email) !== null;
   };
-  // ========== Email Validation end here ================
+
+  const handlePhNumberCheck = (event) => {
+    const value = event?.target?.value;
+    const lenofVal = value?.length;
+
+    // Allow only digits
+    if (/^\d*$/?.test(value)) {
+      setPhoneNumber(value);
+
+      const regex = /^\d{10}$/;
+      if (lenofVal === 0 || regex?.test(value)) {
+        toast.success(lenofVal === 10 ? "Mobile number is valid." : "");
+      } else {
+        toast.error("Mobile number must be exactly 10 digits.");
+      }
+    } else {
+      toast.error("Only digits are allowed.");
+    }
+  };
 
   const handleSend = (e) => {
     e.preventDefault();
     if (username === "") {
       setErrMsg("Username is required!");
-    } else if (phoneNumber === "") {
-      setErrMsg("Phone number is required!");
+      toast.error("Username is required!");
+    } else if (!handlePhNumberCheck(phoneNumber)) {
+      toast.error("Phone number is required!");
     } else if (email === "") {
       setErrMsg("Please give your Email!");
+      toast.error("Please give your Email!");
     } else if (!emailValidation(email)) {
       setErrMsg("Give a valid Email!");
+      toast.error("Give a valid Email!");
     } else if (subject === "") {
-      setErrMsg("Plese give your Subject!");
+      setErrMsg("Please give your Subject!");
+      toast.error("Please give your Subject!");
     } else if (message === "") {
       setErrMsg("Message is required!");
+      toast.error("Message is required!");
     } else {
       setSuccessMsg(
         `Thank you dear ${username}, Your Messages has been sent Successfully!`
@@ -43,8 +65,12 @@ const Contact = () => {
       setEmail("");
       setSubject("");
       setMessage("");
+      toast.success(
+        `Thank you dear ${username}, Your Messages has been sent Successfully!`
+      );
     }
   };
+
   return (
     <section
       id="contact"
@@ -58,16 +84,6 @@ const Contact = () => {
           <ContactLeft />
           <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
             <form className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )}
               <div className="w-full flex flex-col lgl:flex-row gap-10">
                 <div className="w-full lgl:w-1/2 flex flex-col gap-4">
                   <p className="text-sm text-gray-400 uppercase tracking-wide">
@@ -120,7 +136,7 @@ const Contact = () => {
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
                   className={`${
-                    errMsg === "Plese give your Subject!" &&
+                    errMsg === "Please give your Subject!" &&
                     "outline-designColor"
                   } contactInput`}
                   type="text"
@@ -138,7 +154,7 @@ const Contact = () => {
                   } contactTextArea`}
                   cols="30"
                   rows="8"
-                ></textarea>
+                />
               </div>
               <div className="w-full">
                 <button
@@ -148,6 +164,7 @@ const Contact = () => {
                   Send Message
                 </button>
               </div>
+
               {errMsg && (
                 <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
@@ -164,6 +181,6 @@ const Contact = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Contact
+export default Contact;
