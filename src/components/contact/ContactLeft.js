@@ -21,7 +21,7 @@ const ContactLeft = () => {
           stunning design.
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
-          Phone: <span className="text-lightText">+91 secret 🤫</span>
+          Phone: <span className="text-lightText">+91 8016418339</span>
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
           Email:{" "}
