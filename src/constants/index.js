@@ -47,3 +47,44 @@ export const webDevIcons = [
   { icon: <SiTailwindcss /> },
   { icon: <SiNextdotjs /> },
 ];
+
+
+export const socialLinks = [
+  { href: "https://github.com/souravkkt0404", icon: <SiGithub /> },
+  { href: "mailto:schatterjee.0404@gmail.com", icon: <SiGmail /> },
+  {
+    href: "https://www.linkedin.com/in/sourav-chatterjee-a70313208/",
+    icon: <FaLinkedinIn />,
+  },
+  {
+    href: "https://drive.google.com/file/d/1tDWPTjETXoLTKUPwfjrTh0hnESZ7TO3V/view?usp=sharing",
+    icon: <FaFilePdf />,
+  },
+];
+
+export const footerSections = [
+  {
+    title: "Quick Link",
+    links: ["About", "Portfolio", "Services", "Blog", "Contact"],
+  },
+  {
+    title: "Resources",
+    links: [
+      "Authentication",
+      "System Status",
+      "Terms of Service",
+      "Pricing",
+      "Over Right",
+    ],
+  },
+  {
+    title: "Developers",
+    links: [
+      "Documentation",
+      "Authentication",
+      "API Reference",
+      "Support",
+      "Open Source",
+    ],
+  },
+];

@@ -35,7 +35,7 @@ const ContactLeft = () => {
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
          My Resume in PDF:
-          <span className="bannerIcon">
+          <span className="bannerIcon mt-2">
             <a href='https://drive.google.com/file/d/1tDWPTjETXoLTKUPwfjrTh0hnESZ7TO3V/view?usp=sharing'>
               <FaFilePdf />
             </a>
