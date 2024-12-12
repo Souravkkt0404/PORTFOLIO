@@ -19,7 +19,7 @@ const Resume = () => {
         <Title title="" des="My Resume" />
       </div>
       <div>
-        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           <li className="resumeLi">
             <button
               onClick={() => {

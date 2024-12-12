@@ -1,14 +1,14 @@
 import React from "react";
 import { logo } from "../../assets/index";
-import { footerSections, socialLinks } from "../../constants";
+import { footerSections, mediaLinks } from "../../constants";
 
 const Footer = () => {
   return (
-    <div className="w-full py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-4 gap-8">
-      <div className="w-full h-full flex flex-col gap-8">
+    <div className="w-full py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-8">
+      <div className="w-full h-full flex flex-col gap-6 items-center">
         <img className="w-32" src={logo} alt="logo" />
         <div className="flex gap-4">
-          {socialLinks?.map((link, index) => (
+          {mediaLinks?.map((link, index) => (
             <span key={index} className="bannerIcon">
               <a href={link?.href} target="_blank" rel="noopener noreferrer">
                 {link?.icon}
@@ -26,10 +26,15 @@ const Footer = () => {
           <ul className="flex flex-col gap-4 font-titleFont font-medium py-6 overflow-hidden">
             {section?.links?.map((link, linkIndex) => (
               <li key={linkIndex}>
-                <span className="w-full text-lg relative hover:text-designColor duration-300 group cursor-pointer">
-                  {link}
+                <a
+                  href={link?.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full text-lg relative hover:text-designColor duration-300 group cursor-pointer"
+                >
+                  {link?.title}
                   <span className="w-full h-[1px] bg-designColor inline-flex absolute left-0 -bottom-1 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"></span>
-                </span>
+                </a>
               </li>
             ))}
           </ul>
