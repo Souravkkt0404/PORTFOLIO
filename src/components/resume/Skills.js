@@ -34,7 +34,7 @@ const Skills = () => {
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">Development Skills</h2>
         </div>
-        <div className="mt-14 w-full flex flex-col gap-6">
+        <div className="w-full flex flex-col gap-6">
           {skillsLeft?.map((skill, index) => (
             <SkillItem
               key={index}
@@ -57,8 +57,8 @@ const Skills = () => {
           {skillsRight?.map((skill, index) => (
             <SkillItem
               key={index}
-              name={skill.name}
-              percentage={skill.percentage}
+              name={skill?.name}
+              percentage={skill?.percentage}
             />
           ))}
         </div>

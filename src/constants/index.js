@@ -92,10 +92,16 @@ export const footerSections = [
 
 export const skillsLeft = [
   { name: "C++", percentage: "85%" },
+  { name: "SQL", percentage: "80%" },
   { name: "Python", percentage: "85%" },
   { name: "HTML, CSS, JavaScript", percentage: "90%" },
-  { name: "SQL", percentage: "80%" },
+  { name: "JavaScript / TypeScript", percentage: "80%" },
+  { name: "RESTful APIs", percentage: "85%" },
   { name: "Tailwind CSS / Bootstrap CSS / SASS", percentage: "80%" },
+  {
+    name: "Google OAuth, Cookies, Session / Local Storage ",
+    percentage: "80%",
+  },
 ];
 
 export const skillsRight = [
@@ -103,10 +109,12 @@ export const skillsRight = [
   { name: "Next.js", percentage: "50%" },
   { name: "Node", percentage: "50%" },
   { name: "Git & GitHub", percentage: "90%" },
+  { name: "Redux", percentage: "75%" },
+  { name: "GraphQL", percentage: "70%" },
   {
-    name: "Google OAuth, Cookies, Passport, Postman API, OpenCV",
+    name: "Passport, Postman API, OpenCV",
     percentage: "80%",
   },
   { name: "Web Scraping (Selenium | BeautifulSoup)", percentage: "100%" },
+  
 ];
-
