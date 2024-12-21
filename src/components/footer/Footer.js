@@ -4,7 +4,7 @@ import { footerSections, mediaLinks } from "../../constants";
 
 const Footer = () => {
   return (
-    <div className="w-full py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-8">
+    <div className="w-full py-1 lgl:pt-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-8">
       <div className="w-full h-full flex flex-col gap-6 items-center">
         <img className="w-32" src={logo} alt="logo" />
         <div className="flex gap-4">

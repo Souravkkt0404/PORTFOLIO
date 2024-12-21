@@ -17,31 +17,12 @@ const Contact = () => {
     return emailRegex.exec(email) !== null;
   };
 
-  const handlePhNumberCheck = (event) => {
-    const value = event?.target?.value;
-    const lenofVal = value?.length;
-
-    // Allow only digits
-    if (/^\d*$/?.test(value)) {
-      setPhoneNumber(value);
-
-      const regex = /^\d{10}$/;
-      if (lenofVal === 0 || regex?.test(value)) {
-        toast.success(lenofVal === 10 ? "Mobile number is valid." : "");
-      } else {
-        toast.error("Mobile number must be exactly 10 digits.");
-      }
-    } else {
-      toast.error("Only digits are allowed.");
-    }
-  };
-
   const handleSend = (e) => {
     e.preventDefault();
     if (username === "") {
       setErrMsg("Username is required!");
       toast.error("Username is required!");
-    } else if (!handlePhNumberCheck(phoneNumber)) {
+    } else if (phoneNumber === "") {
       toast.error("Phone number is required!");
     } else if (email === "") {
       setErrMsg("Please give your Email!");
@@ -76,7 +57,7 @@ const Contact = () => {
       id="contact"
       className="w-full py-20 border-b-[1px] border-b-black"
     >
-      <div className="flex justify-center items-center text-center">
+      <div className="flex justify-center items-center text-center lgl:pt-2 pt-16">
         <Title title="CONTACT" des="Lets Connect " />
       </div>
       <div className="w-full">
