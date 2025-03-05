@@ -71,15 +71,15 @@ export const footerSections = [
     title: "Youtube Vlogs",
     links: [
       {
-        href: "https://studio.youtube.com/video/HRynORyDY2M/edit",
+        href: "https://www.youtube.com/watch?v=HRynORyDY2M",
         title: "Rk in Bangalore",
       },
       {
-        href: "https://studio.youtube.com/video/igzjQkJZAxw/edit",
+        href: "https://www.youtube.com/video/igzjQkJZAxw",
         title: "Explore Adiyogi",
       },
       {
-        href: "https://studio.youtube.com/video/YOYuF3yZF-0/edit",
+        href: "https://www.youtube.com/video/YOYuF3yZF-0",
         title: "Varanasi Tour",
       },
       {

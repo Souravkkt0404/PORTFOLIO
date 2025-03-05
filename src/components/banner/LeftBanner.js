@@ -36,10 +36,10 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="t,ext-base font-bodyFont leading-6 tracking-wide">
-          I am a passionate front-end developer and technology enthusiast. With
-          a strong foundation in web development and a keen eye for detail, I
-          create innovative solutions that bridge cutting-edge technology with
-          exceptional user experiences."
+          I am Passionate front-end developer and technology enthusiast with a
+          strong foundation in web development and a keen eye for detail. I
+          specialize in crafting innovative, high-performance web solutions that
+          blend cutting-edge technology with seamless user experiences.
         </p>
       </div>
       {/* Media */}
