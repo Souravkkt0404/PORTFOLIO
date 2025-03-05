@@ -9,7 +9,9 @@ const LeftBanner = () => {
       "Full Stack Developer.",
       "UI Developer",
       "React Developer",
+      "Frontend Developer",
       "Youtube Vlogger",
+      "Next Js Developer",
       "Content Creator",
       "Video Editor",
     ],
@@ -25,7 +27,7 @@ const LeftBanner = () => {
         <h1 className="text-6xl font-bold text-white">
           Hi, I'm <span className="text-designColor capitalize">Sourav</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-4xl font-bold text-white w-full h-20 xl:h-12">
           a <span>{text}</span>
           <Cursor
             cursorBlinking="false"
@@ -41,7 +43,9 @@ const LeftBanner = () => {
         </p>
       </div>
       {/* Media */}
-      <Media />
+      <div>
+        <Media />
+      </div>
     </div>
   );
 };

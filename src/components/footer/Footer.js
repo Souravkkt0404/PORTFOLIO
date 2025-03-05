@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="w-full h-full flex flex-col gap-6 items-center">
         <img className="w-32" src={logo} alt="logo" />
         <div className="flex gap-4">
-          {mediaLinks?.map((link, index) => (
-            <span key={index} className="bannerIcon">
+          {mediaLinks?.map((link) => (
+            <span key={link?.href} className="bannerIcon">
               <a href={link?.href} target="_blank" rel="noopener noreferrer">
                 {link?.icon}
               </a>
