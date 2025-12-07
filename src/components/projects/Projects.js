@@ -1,7 +1,14 @@
-import React from 'react'
-import Title from '../layouts/Title'
-import { projectOne, projectThree, projectFour, projectFive, projectSix,projectExtra } from "../../assets/index";
-import ProjectsCard from './ProjectsCard';
+import React from "react";
+import Title from "../layouts/Title";
+import {
+  projectOne,
+  DoctorAppointmentImg,
+  projectFour,
+  projectFive,
+  projectExtra,
+  TravelData,
+} from "../../assets/index";
+import ProjectsCard from "./ProjectsCard";
 
 const Projects = () => {
   return (
@@ -23,20 +30,21 @@ const Projects = () => {
           githubLink="https://github.com/mihirc0111/IPL-Predictor-Mihir"
           websiteLink="https://acewebsolution.com/"
         />
-      
-        <ProjectsCard
+
+        {/* <ProjectsCard
           title="Altorum Leren Website"
           des=" This is a website for posting secrets anonymously with an authentication system ."
           src={projectThree}
           githubLink="https://github.com/mihirc0111/Secrets"
           websiteLink="https://www.altorumleren.com/"
-        />
+        /> */}
+
         <ProjectsCard
           title="Shooline Consultancy Website"
           des=" This is a website Our accomplished team of lawyers brings extensive expertise to various legal domains, including Criminal Law, check bounce cases, and Matrimonial/Divorce cases."
           src={projectExtra}
           githubLink="https://github.com/mihirc0111/Secrets"
-          websiteLink="https://shooline-consultancy.vercel.app/"
+          websiteLink="https://www.shoolinconsultancy.org/"
         />
         <ProjectsCard
           title="After School Diaries"
@@ -53,15 +61,22 @@ const Projects = () => {
           websiteLink="https://mihirs-weather-website.onrender.com/"
         />
         <ProjectsCard
-          title="Face Detection"
+          title="Tavel Data"
           des=" This project uses various libraries like to detect human face from a given image, detect a face from a live -webcam video and to create an attendance system."
-          src={projectSix}
+          src={TravelData}
           githubLink="https://github.com/mihirc0111/Face-Detection-ML-Project-Python.git"
-          websiteLink=""
+          websiteLink="https://travel-landing-page-sourav.vercel.app/"
+        />
+        <ProjectsCard
+          title="Doctor Aappointment Booking System"
+          des=" This is a website for posting secrets anonymously with an authentication system ."
+          src={DoctorAppointmentImg}
+          githubLink="https://github.com/mihirc0111/Secrets"
+          websiteLink="https://doctor-appointment-booking-system-roan.vercel.app/"
         />
       </div>
     </section>
   );
-}
+};
 
-export default Projects
+export default Projects;
