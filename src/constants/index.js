@@ -91,7 +91,6 @@ export const footerSections = [
 ];
 
 export const skillsLeft = [
-  { name: "C++", percentage: "85%" },
   { name: "SQL", percentage: "80%" },
   { name: "Python", percentage: "85%" },
   { name: "HTML, CSS, JavaScript", percentage: "90%" },
@@ -102,6 +101,7 @@ export const skillsLeft = [
     name: "Google OAuth, Cookies, Session / Local Storage ",
     percentage: "80%",
   },
+  {name: "ServiceNow Developer", percentage: "85%"},
 ];
 
 export const skillsRight = [

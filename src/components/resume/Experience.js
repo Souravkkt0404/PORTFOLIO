@@ -11,10 +11,17 @@ const Experience = () => {
     >
       <div>
         <div className="flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2023 - 20XX</p>
+          <p className="text-sm text-designColor tracking-[4px]">2023 - 2026</p>
           <h2 className="text-4xl font-bold">Job Experience</h2>
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+          <ResumeCard
+            title="Associate Technical Consultancy"
+            subTitle="Infosys"
+            result="Kolkata,India"
+            des="Designed and developed ServiceNow applications using JavaScript and the Glide API.Customized functionality through Business Rules, Client Scripts, UI Policies, and Script Includes.
+Delivered scalable solutions that improved system performance and user experience."
+          />
           <ResumeCard
             title="Software Development Engineer - I"
             subTitle="HUDINI (Sept,2023 - Present)"
@@ -44,14 +51,6 @@ const Experience = () => {
             "
           />
         </div>
-        {/* <ResumeCard
-          title="Student Intern, Bangalore"
-          subTitle="AiRobosoft Product and Service Ltd [ Mar,2020 - Sept,2020] "
-          result="Bangalore,India"
-          des="Learned and implemented Machine Learning and Artificial Intelligence.
-             Developed project on Personal assistant using python. 
-            "
-        /> */}
       </div>
       {/* <div>
         <div className="flex flex-col gap-4">
