@@ -1,52 +1,82 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { skillsLeft, skillsRight } from "../../constants";
+import { skillset } from "../../constants";
 
-const SkillItem = ({ name, percentage }) => (
-  <div className="overflow-x-hidden">
-    <p className="text-sm uppercase font-medium">{name}</p>
-    <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-      <motion.span
-        initial={{ x: "-100%", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="w-[calc(percentage)] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-        style={{ width: percentage }}
-      >
-        <span className="absolute -top-7 right-0">{percentage}</span>
-      </motion.span>
-    </span>
-  </div>
+
+const SkillItem = ({ name, percentage, icon, isHovered, onMouseEnter, onMouseLeave }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.4 }}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+    className="min-w-[220px] flex-shrink-0 h-[220px] rounded-2xl border border-[#2b303b] bg-gradient-to-br from-[#0d1420] to-[#0a0f1a] p-7 shadow-[0_12px_40px_rgba(15,23,42,0.3)] hover:shadow-[0_18px_55px_rgba(15,23,42,0.5)] hover:border-white transition-all duration-300 flex flex-col items-center justify-center cursor-pointer relative"
+  >
+    {/* Icon (default view) */}
+    <div className={`text-6xl transition-all duration-300 ${isHovered ? "opacity-0 scale-0" : "opacity-100 scale-100"}`}>
+      {icon}
+    </div>
+
+    {/* Name and Percentage (hover view) */}
+    <div className={`absolute text-center transition-all duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}>
+      <p className="text-sm font-bold text-white mb-2">{name}</p>
+      <span className="text-lg font-bold text-white">{percentage}</span>
+    </div>
+  </motion.div>
 );
 
 const Skills = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const allSkills = skillset;
+  const scrollContainerRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 350;
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
+      animate={{ opacity: 1, transition: { duration: 0.6 } }}
+      className="w-full flex flex-col gap-8"
     >
-      {/* Left Section */}
-      <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Tech Stack
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Development Skills</h2>
+      <div className="py-8 font-titleFont flex flex-col gap-3">
+        <div className="flex items-center gap-3 text-sm uppercase tracking-[0.36em] text-designColor">
+          <span className="h-[1px] w-16 bg-designColor inline-block" />
+          Tech Stack
         </div>
-        <div className="w-full flex flex-col gap-6">
-          {skillsLeft?.map((skill, index) => (
+        <h2 className="text-3xl md:text-4xl font-bold">Professional Skills</h2>
+      </div>
+
+      {/* Carousel with Navigation Arrows */}
+      <div className="relative group">
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-6 overflow-x-auto pb-4 pt-2 scroll-smooth scrollbar-hide"
+          style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
+        >
+          {allSkills?.map((skill, index) => (
             <SkillItem
               key={index}
               name={skill.name}
               percentage={skill.percentage}
+              icon={skill.icon}
+              isHovered={hoveredIndex === index}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             />
           ))}
         </div>
       </div>
 
       {/* Right Section */}
-      <div className="w-full lgl:w-1/2">
+      {/* <div className="w-full lgl:w-1/2">
         <div className="py-12 font-titleFont flex flex-col gap-4">
           <p className="text-sm text-designColor tracking-[4px] uppercase">
             Tech Stack
@@ -62,7 +92,7 @@ const Skills = () => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
