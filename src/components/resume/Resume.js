@@ -7,8 +7,8 @@ import Experience from "./Experience";
 
 const Resume = () => {
   const [experienceData, setExperienceData] = useState(false);
-  const [educationData, setEducationData] = useState(true);
-  const [skillData, setSkillData] = useState(false);
+  const [educationData, setEducationData] = useState(false);
+  const [skillData, setSkillData] = useState(true);
   const [achievementData, setAchievementData] = useState(false);
   return (
     <section
@@ -21,6 +21,23 @@ const Resume = () => {
       <div>
         <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {" "}
+          <li className="resumeLi">
+            <button
+              onClick={() => {
+                setEducationData(false);
+                setSkillData(true);
+                setExperienceData(false);
+                setAchievementData(false);
+              }}
+              className={`w-full py-2 border-transparent${
+                skillData
+                  ? "border-designColor rounded-lg"
+                  : "border-transparent"
+              }`}
+            >
+              Professional Skills
+            </button>
+          </li>
           <li className="resumeLi">
             <button
               onClick={() => {
@@ -55,28 +72,11 @@ const Resume = () => {
               Education
             </button>
           </li>
-          <li className="resumeLi">
-            <button
-              onClick={() => {
-                setEducationData(false);
-                setSkillData(true);
-                setExperienceData(false);
-                setAchievementData(false);
-              }}
-              className={`w-full py-2 border-transparent${
-                skillData
-                  ? "border-designColor rounded-lg"
-                  : "border-transparent"
-              }`}
-            >
-              Professional Skills
-            </button>
-          </li>
         </ul>
       </div>
+      {skillData && <Skills />}
       {experienceData && <Experience />}
       {educationData && <Education />}
-      {skillData && <Skills />}
       {achievementData && <Achievement />}
     </section>
   );

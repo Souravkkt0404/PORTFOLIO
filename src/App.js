@@ -9,9 +9,9 @@ import Resume from "./components/resume/Resume";
 
 function App() {
   return (
-    <div className="w-full h-auto bg-bodyColor text-lightText px-4 mx-auto">
-      <Navbar />
-      <div className="max-w-screen-xl mx-auto">
+    <div className="w-full h-auto bg-bodyColor text-lightText">
+      <div className="max-w-screen-2xl mx-auto px-4">
+        <Navbar />
         <Banner />
         <Features />
         <Projects />

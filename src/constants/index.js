@@ -5,8 +5,29 @@ import {
   FaHtml5,
   FaBootstrap,
   FaFilePdf,
+  FaDatabase,
+  FaPython,
+  FaGoogle,
+  FaPaintBrush,
+  FaProjectDiagram,
 } from "react-icons/fa";
-import { SiTailwindcss, SiGithub, SiGmail, SiNextdotjs } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiGithub,
+  SiGmail,
+  SiNextdotjs,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiSass,
+  SiRedux,
+  SiGraphql,
+  SiSelenium,
+  SiFigma,
+  SiJira,
+} from "react-icons/si";
+import { AiOutlineApi } from "react-icons/ai";
 
 export const navLinksData = [
   { _id: 1001, title: "Home", link: "home" },
@@ -90,31 +111,28 @@ export const footerSections = [
   },
 ];
 
-export const skillsLeft = [
-  { name: "SQL", percentage: "80%" },
-  { name: "Python", percentage: "85%" },
-  { name: "HTML, CSS, JavaScript", percentage: "90%" },
-  { name: "JavaScript / TypeScript", percentage: "80%" },
-  { name: "RESTful APIs", percentage: "85%" },
-  { name: "Tailwind CSS / Bootstrap CSS / SASS", percentage: "80%" },
-  {
-    name: "Google OAuth, Cookies, Session / Local Storage ",
-    percentage: "80%",
-  },
-  {name: "ServiceNow Developer", percentage: "85%"},
-];
-
-export const skillsRight = [
-  { name: "React", percentage: "80%" },
-  { name: "Next.js", percentage: "50%" },
-  { name: "Node", percentage: "50%" },
-  { name: "Git & GitHub", percentage: "90%" },
-  { name: "Redux", percentage: "75%" },
-  { name: "GraphQL", percentage: "70%" },
-  {
-    name: "Passport, Postman API, OpenCV",
-    percentage: "80%",
-  },
-  { name: "Web Scraping (Selenium | BeautifulSoup)", percentage: "100%" },
-  
+export const skillset = [
+  { name: "SQL", percentage: "80%", icon: <FaDatabase className="text-designColor" /> },
+  { name: "Python", percentage: "85%", icon: <FaPython className="text-blue-500" /> },
+  { name: "HTML", percentage: "100%", icon: <SiHtml5 className="text-orange-500" /> },
+  { name: "CSS", percentage: "100%", icon: <SiCss3 className="text-sky-400" /> },
+  { name: "JavaScript", percentage: "90%", icon: <SiJavascript className="text-yellow-400" /> },
+  { name: "TypeScript", percentage: "80%", icon: <SiTypescript className="text-sky-600" /> },
+  { name: "RESTful APIs", percentage: "85%", icon: <AiOutlineApi className="text-teal-400" /> },
+  { name: "Tailwind CSS", percentage: "80%", icon: <SiTailwindcss className="text-cyan-400" /> },
+  { name: "Bootstrap CSS", percentage: "90%", icon: <FaBootstrap className="text-purple-600" /> },
+  { name: "SASS", percentage: "80%", icon: <SiSass className="text-pink-500" /> },
+  { name: "Google OAuth, Cookies, Session / Local Storage", percentage: "80%", icon: <FaGoogle className="text-red-500" /> },
+  { name: "ServiceNow Developer", percentage: "85%", icon: <FaProjectDiagram className="text-white" /> },
+  { name: "Figma, Adobe Photoshop, Adobe Illustrator", percentage: "80%", icon: <SiFigma className="text-pink-500" /> },
+  { name: "Agile Methodology, Scrum, Jira, Trello", percentage: "80%", icon: <SiJira className="text-blue-500" /> },
+  { name: "React", percentage: "80%", icon: <FaReact className="text-blue-400" /> },
+  { name: "Next.js", percentage: "50%", icon: <SiNextdotjs className="text-gray-200" /> },
+  { name: "Node", percentage: "50%", icon: <FaNodeJs className="text-green-500" /> },
+  { name: "Modern UI", percentage: "80%", icon: <FaPaintBrush className="text-white" /> },
+  { name: "Git & GitHub", percentage: "90%", icon: <SiGithub className="text-gray-300" /> },
+  { name: "Redux", percentage: "75%", icon: <SiRedux className="text-purple-500" /> },
+  { name: "GraphQL", percentage: "70%", icon: <SiGraphql className="text-pink-600" /> },
+  { name: "Passport, Postman API, OpenCV", percentage: "80%", icon: <AiOutlineApi className="text-teal-400" /> },
+  { name: "Web Scraping (Selenium | BeautifulSoup)", percentage: "100%", icon: <SiSelenium className="text-white" /> },
 ];
