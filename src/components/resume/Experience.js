@@ -16,15 +16,15 @@ const Experience = () => {
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="Associate Technical Consultancy"
-            subTitle="Infosys"
+            title="Associate Technical Consultant"
+            subTitle="Infosys (May,2025 - Present) [ 1 year ]"
             result="Kolkata,India"
             des="Designed and developed ServiceNow applications using JavaScript and the Glide API.Customized functionality through Business Rules, Client Scripts, UI Policies, and Script Includes.
 Delivered scalable solutions that improved system performance and user experience."
           />
           <ResumeCard
             title="Software Development Engineer - I"
-            subTitle="HUDINI (Sept,2023 - Present)"
+            subTitle="HUDINI (Sept,2023 - Apr, 2025) [ 1 year 7 months ]"
             result="Bangalore,India"
             des="Involved in and responsible for implementing user interfaces using React Js, ensuring they are visually appealing,
             responsive, and user-friendly.
@@ -33,7 +33,7 @@ Delivered scalable solutions that improved system performance and user experienc
           />
           <ResumeCard
             title="Software Developer"
-            subTitle="Ennoventure Technology Pvt. Ltd. - (Oct,2022 - Sept,2023)"
+            subTitle="Ennoventure Technology Pvt. Ltd. - (Oct,2022 - Sept,2023) [ 1 year ]"
             result="Bangalore,India"
             des="Responsible for setting up the backend system of the application.
           Implementing UI changes using React JS on the Enovation Project.
@@ -41,7 +41,7 @@ Delivered scalable solutions that improved system performance and user experienc
           />
           <ResumeCard
             title="Front-End Developer-Intern"
-            subTitle="Altorum Leren Pvt. Ltd. (Jan,2022 - Sept,2022)  [9 months]"
+            subTitle="Altorum Leren Pvt. Ltd. (Jan,2022 - Sept,2022)  [ 9 months ]"
             result="Bangalore,India"
             des="Collaborated with fellow team members to develop 2 new websites.
             Assisted in constructing 100% self-contained, reusable, and testable modules and components for future

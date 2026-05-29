@@ -1,65 +1,9 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { skillsLeft, skillsRight } from "../../constants";
-import {
-  FaReact,
-  FaNodeJs,
-  FaHtml5,
-  FaBootstrap,
-  FaPython,
-  FaDatabase,
-  FaGitAlt,
-  FaRedhat,
-} from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiGithub,
-  SiNextdotjs,
-  SiRedux,
-  SiGraphql,
-  SiSelenium,
-} from "react-icons/si";
+import { skillset } from "../../constants";
 
-const skillIconMap = {
-  react: <FaReact className="text-blue-400" />,
-  node: <FaNodeJs className="text-green-500" />,
-  html: <FaHtml5 className="text-orange-500" />,
-  css: <FaHtml5 className="text-blue-500" />,
-  javascript: <FaHtml5 className="text-yellow-400" />,
-  typescript: <FaHtml5 className="text-blue-600" />,
-  python: <FaPython className="text-blue-500" />,
-  sql: <FaDatabase className="text-yellow-600" />,
-  nextjs: <SiNextdotjs className="text-gray-200" />,
-  tailwind: <SiTailwindcss className="text-cyan-400" />,
-  bootstrap: <FaBootstrap className="text-purple-600" />,
-  git: <FaGitAlt className="text-white" />,
-  github: <SiGithub className="text-gray-300" />,
-  redux: <SiRedux className="text-purple-500" />,
-  graphql: <SiGraphql className="text-pink-600" />,
-  selenium: <SiSelenium className="text-white" />,
-  servicenow: <FaRedhat className="text-white" />,
-};
 
-const getIconForSkill = (skillName) => {
-  const lowerName = skillName.toLowerCase();
-  if (lowerName.includes("react")) return skillIconMap.react;
-  if (lowerName.includes("node")) return skillIconMap.node;
-  if (lowerName.includes("html")) return skillIconMap.html;
-  if (lowerName.includes("python")) return skillIconMap.python;
-  if (lowerName.includes("sql")) return skillIconMap.sql;
-  if (lowerName.includes("next")) return skillIconMap.nextjs;
-  if (lowerName.includes("tailwind")) return skillIconMap.tailwind;
-  if (lowerName.includes("bootstrap")) return skillIconMap.bootstrap;
-  if (lowerName.includes("git")) return skillIconMap.git;
-  if (lowerName.includes("github")) return skillIconMap.github;
-  if (lowerName.includes("redux")) return skillIconMap.redux;
-  if (lowerName.includes("graphql")) return skillIconMap.graphql;
-  if (lowerName.includes("selenium")) return skillIconMap.selenium;
-  if (lowerName.includes("servicenow")) return skillIconMap.servicenow;
-  return skillIconMap.html;
-};
-
-const SkillItem = ({ name, percentage, isHovered, onMouseEnter, onMouseLeave }) => (
+const SkillItem = ({ name, percentage, icon, isHovered, onMouseEnter, onMouseLeave }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
@@ -70,7 +14,7 @@ const SkillItem = ({ name, percentage, isHovered, onMouseEnter, onMouseLeave }) 
   >
     {/* Icon (default view) */}
     <div className={`text-6xl transition-all duration-300 ${isHovered ? "opacity-0 scale-0" : "opacity-100 scale-100"}`}>
-      {getIconForSkill(name)}
+      {icon}
     </div>
 
     {/* Name and Percentage (hover view) */}
@@ -83,7 +27,7 @@ const SkillItem = ({ name, percentage, isHovered, onMouseEnter, onMouseLeave }) 
 
 const Skills = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const allSkills = [...skillsLeft, ...skillsRight];
+  const allSkills = skillset;
   const scrollContainerRef = useRef(null);
 
   const scroll = (direction) => {
@@ -107,7 +51,7 @@ const Skills = () => {
           <span className="h-[1px] w-16 bg-designColor inline-block" />
           Tech Stack
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold">Development Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Professional Skills</h2>
       </div>
 
       {/* Carousel with Navigation Arrows */}
@@ -121,10 +65,11 @@ const Skills = () => {
             <SkillItem
               key={index}
               name={skill.name}
+              percentage={skill.percentage}
+              icon={skill.icon}
               isHovered={hoveredIndex === index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              percentage={skill.percentage}
             />
           ))}
         </div>
