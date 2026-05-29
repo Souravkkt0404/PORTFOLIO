@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { skillset } from "../../constants";
 
@@ -73,26 +73,49 @@ const Skills = () => {
             />
           ))}
         </div>
-      </div>
 
-      {/* Right Section */}
-      {/* <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Tech Stack
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Development Skills</h2>
-        </div>
-        <div className="flex flex-col gap-6">
-          {skillsRight?.map((skill, index) => (
-            <SkillItem
-              key={index}
-              name={skill?.name}
-              percentage={skill?.percentage}
+        {/* Left Arrow */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-[#2b303b] bg-[#0d1420] hover:bg-designColor hover:border-designColor text-gray-400 hover:text-black transition-all duration-300 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100"
+          title="Scroll left"
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
             />
-          ))}
-        </div>
-      </div> */}
+          </svg>
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          onClick={() => scroll("right")}
+          className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-[#2b303b] bg-[#0d1420] hover:bg-designColor hover:border-designColor text-gray-400 hover:text-black transition-all duration-300 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100"
+          title="Scroll right"
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
     </motion.div>
   );
 };

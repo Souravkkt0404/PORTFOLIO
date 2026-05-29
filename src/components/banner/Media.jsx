@@ -27,7 +27,7 @@ const Media = () => (
       </h2>
       <div className="flex gap-4">
         {webDevIcons?.map((devIcon, index) => (
-          <span className="bannerIcon" key={index}>
+          <span className="bannerIcon" key={index} title={devIcon?.title}>
             {devIcon?.icon}
           </span>
         ))}
