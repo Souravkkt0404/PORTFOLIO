@@ -108,6 +108,7 @@ export const skillsRight = [
   { name: "React", percentage: "80%" },
   { name: "Next.js", percentage: "50%" },
   { name: "Node", percentage: "50%" },
+  { name: "Modern UI", percentage: "80%" },
   { name: "Git & GitHub", percentage: "90%" },
   { name: "Redux", percentage: "75%" },
   { name: "GraphQL", percentage: "70%" },
@@ -116,5 +117,4 @@ export const skillsRight = [
     percentage: "80%",
   },
   { name: "Web Scraping (Selenium | BeautifulSoup)", percentage: "100%" },
-  
 ];
