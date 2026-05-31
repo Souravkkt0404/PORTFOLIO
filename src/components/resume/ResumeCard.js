@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const ResumeCard = ({ title, subTitle, result, percentage, des, image }) => {
   return (
@@ -18,9 +18,6 @@ const ResumeCard = ({ title, subTitle, result, percentage, des, image }) => {
         <div className="flex flex-col justify-between gap-3 p-5 md:w-1/2 h-full">
           <div className="flex flex-col gap-3">
             <div>
-              <span className="inline-flex rounded-full bg-designColor/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-designColor">
-                Education
-              </span>
               <h3 className="mt-4 text-2xl md:text-3xl font-semibold text-white">
                 {title}
               </h3>
@@ -33,7 +30,9 @@ const ResumeCard = ({ title, subTitle, result, percentage, des, image }) => {
                   <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400">
                     Result
                   </p>
-                  <p className="mt-3 text-lg font-semibold text-white">{result}</p>
+                  <p className="mt-3 text-lg font-semibold text-white">
+                    {result}
+                  </p>
                 </div>
               )}
               {percentage && (
@@ -41,7 +40,9 @@ const ResumeCard = ({ title, subTitle, result, percentage, des, image }) => {
                   <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400">
                     Percentage
                   </p>
-                  <p className="mt-3 text-lg font-semibold text-white">{percentage}</p>
+                  <p className="mt-3 text-lg font-semibold text-white">
+                    {percentage}
+                  </p>
                 </div>
               )}
             </div>
@@ -51,7 +52,7 @@ const ResumeCard = ({ title, subTitle, result, percentage, des, image }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ResumeCard
+export default ResumeCard;
