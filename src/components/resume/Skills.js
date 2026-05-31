@@ -77,7 +77,7 @@ const Skills = () => {
         {/* Left Arrow */}
         <button
           onClick={() => scroll("left")}
-          className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-[#2b303b] bg-[#0d1420] hover:bg-designColor hover:border-designColor text-gray-400 hover:text-black transition-all duration-300 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100"
+          className="hidden lg:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-[#2b303b] bg-[#0d1420] hover:bg-designColor hover:border-designColor text-gray-400 hover:text-black transition-all duration-300 items-center justify-center shadow-lg opacity-0 group-hover:opacity-100"
           title="Scroll left"
         >
           <svg
@@ -98,7 +98,7 @@ const Skills = () => {
         {/* Right Arrow */}
         <button
           onClick={() => scroll("right")}
-          className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-[#2b303b] bg-[#0d1420] hover:bg-designColor hover:border-designColor text-gray-400 hover:text-black transition-all duration-300 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100"
+          className="hidden lg:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-[#2b303b] bg-[#0d1420] hover:bg-designColor hover:border-designColor text-gray-400 hover:text-black transition-all duration-300 items-center justify-center shadow-lg opacity-0 group-hover:opacity-100"
           title="Scroll right"
         >
           <svg

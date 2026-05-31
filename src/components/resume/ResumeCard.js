@@ -1,35 +1,57 @@
 import React from 'react'
 
-const ResumeCard = ({title,subTitle,result,des}) => {
+const ResumeCard = ({ title, subTitle, result, percentage, des, image }) => {
   return (
-    <div className="w-full h-1/3 group flex">
-      <div className="w-10 h-[6px] bgOpacity mt-16 relative">
-        <span className="absolute w-5 h-5 rounded-full -top-2 -left-3 flex justify-center items-center bg-black bg-opacity-60">
-          <span className="w-3 h-3 rounded-full bg-bodyColor inline-flex group-hover:bg-designColor duration-300"></span>
-        </span>
-      </div>
-      <div className="w-full bg-black bg-opacity-20 hover:bg-opacity-30 duration-300  rounded-lg p-4 lgl:px-10 flex flex-col justify-center gap-6 lgl:gap-6 shadow-shadowOne">
-        <div className="flex flex-col lgl:flex-row justify-between gap-4 lgl:gap-0 lgl:items-center">
-          <div>
-            <h3 className="text-sm md:text-2xl font-semibold group-hover:text-white duration-300">
-              {title}
-            </h3>
-            <p className="text-sm mt-2 text-gray-400 group-hover:text-white duration-300">
-              {subTitle}
-            </p>
+    <div className="w-full h-[460px] overflow-hidden rounded-3xl border border-[#2a3240] bg-[#09101a] shadow-[0_24px_80px_rgba(0,0,0,0.24)] transition-transform duration-300 hover:-translate-y-1 hover:border-designColor">
+      <div className="flex flex-col h-full md:flex-row md:items-stretch">
+        {image && (
+          <div className="relative w-full md:w-1/2 h-52 md:h-full overflow-hidden">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
           </div>
-          <div>
-            <p className="px-4 py-2 text-designColor bg-black bg-opacity-25 rounded-lg flex justify-center items-center shadow-shadowOne text-sm font-medium">
-              {result}
-            </p>
+        )}
+
+        <div className="flex flex-col justify-between gap-3 p-5 md:w-1/2 h-full">
+          <div className="flex flex-col gap-3">
+            <div>
+              <span className="inline-flex rounded-full bg-designColor/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-designColor">
+                Education
+              </span>
+              <h3 className="mt-4 text-2xl md:text-3xl font-semibold text-white">
+                {title}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-gray-400">{subTitle}</p>
+            </div>
+
+            <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+              {result && (
+                <div className="flex-1 rounded-3xl border border-white/10 bg-white/5 p-4 text-center backdrop-blur-sm">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400">
+                    Result
+                  </p>
+                  <p className="mt-3 text-lg font-semibold text-white">{result}</p>
+                </div>
+              )}
+              {percentage && (
+                <div className="flex-1 rounded-3xl border border-white/10 bg-[#111827]/90 p-4 text-center backdrop-blur-sm">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400">
+                    Percentage
+                  </p>
+                  <p className="mt-3 text-lg font-semibold text-white">{percentage}</p>
+                </div>
+              )}
+            </div>
           </div>
+
+          <p className="text-sm leading-7 text-gray-300">{des}</p>
         </div>
-        <p className="text-sm md:text-sm font-medium text-gray-400 group-hover:text-gray-300 duration-300">
-          {des}
-        </p>
       </div>
     </div>
-  );
+  )
 }
 
 export default ResumeCard
