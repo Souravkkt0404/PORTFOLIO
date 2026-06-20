@@ -13,7 +13,7 @@ const Resume = () => {
   return (
     <section
       id="resume"
-      className="w-full py-4 sm:py-10 mb-10 sm:mb-20 border-transparent border-b-[1px] sm:border-b-0 border-b-black"
+      className="w-full py-4 sm:py-10 mb-10 sm:mb-20 border-transparent border-b-[1px] sm:border-b-0 border-b-white"
     >
       <div className="flex justify-center items-center text-center">
         <Title title="" des="My Resume" />

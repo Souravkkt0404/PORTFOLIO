@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../layouts/Title";
 import {
-  projectOne,
+  // projectOne,
   DoctorAppointmentImg,
   projectFour,
   projectFive,
@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full py-20 border-b-[1px] border-b-black"
+      className="w-full py-20 border-b-[1px] border-b-white"
     >
       <div className="flex justify-center items-center text-center">
         <Title
@@ -23,13 +23,13 @@ const Projects = () => {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-        <ProjectsCard
-          title="Ace Web Solution Website"
+        {/* <ProjectsCard
+          title="Ammas-Pastries"
           des=" A Dynamic website project using React Js with Tailwind CSS and email JS."
           src={projectOne}
           githubLink="https://github.com/mihirc0111/IPL-Predictor-Mihir"
           websiteLink="https://acewebsolution.com/"
-        />
+        /> */}
 
         {/* <ProjectsCard
           title="Altorum Leren Website"
