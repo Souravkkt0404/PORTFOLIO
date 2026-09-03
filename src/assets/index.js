@@ -2,7 +2,7 @@ import logo from "./images/logo.png";
 import banner from "./images/personal/banner.jpg";
 import projectOne from "./images/projects/projectOne.png";
 import projectTwo from "./images/projects/projectTwo.png";
-import projectThree from "./images/projects/projectThree.png";
+import projectThree from "./images/projects/projectThree.jpg";
 import DoctorAppointmentImg from "./images/projects/doctorAppointment.png";
 import TravelData from "./images/projects/travelData.png";
 import projectFour from "./images/projects/projectFour.png";

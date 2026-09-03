@@ -1,12 +1,12 @@
 import React from "react";
 import Title from "../layouts/Title";
 import {
-  // projectOne,
   DoctorAppointmentImg,
   projectFour,
   projectFive,
   projectExtra,
   TravelData,
+  projectThree,
 } from "../../assets/index";
 import ProjectsCard from "./ProjectsCard";
 
@@ -31,13 +31,13 @@ const Projects = () => {
           websiteLink="https://acewebsolution.com/"
         /> */}
 
-        {/* <ProjectsCard
-          title="Altorum Leren Website"
-          des=" This is a website for posting secrets anonymously with an authentication system ."
+        <ProjectsCard
+          title="Joannah Fancy Costumes"
+          des="Fancy costume rentals, sales & custom stitching for all ages, events, schools & colleges."
           src={projectThree}
           githubLink="https://github.com/mihirc0111/Secrets"
-          websiteLink="https://www.altorumleren.com/"
-        /> */}
+          websiteLink="https://joannah-fancy-costumes.localo.site/"
+        />
 
         <ProjectsCard
           title="Shooline Consultancy Website"
